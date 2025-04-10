@@ -37,6 +37,9 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.es2021,
+        ElMessage: 'readonly',
+        ElMessageBox: 'readonly',
+        ElLoading: 'readonly'
       },
     },
     // ...其他配置
