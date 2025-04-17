@@ -5,6 +5,9 @@ const channelList = ref([])
 defineProps({
     modelValue: {
         type: [Number, String]
+    },
+    width: {
+        type: String
     }
 })
 const emit = defineEmits(['update:modelValue'])
@@ -16,10 +19,9 @@ const getChannelList = async () => {
 getChannelList()
 </script>
 <template>
-     <!-- :modelValue传数字 @update:modelValue修改数据 -->
-    <el-select 
-    :modelValue="modelValue" 
-    @update:modelValue="emit('update:modelValue',$event)" style="width: 200px;">
+    <!-- :modelValue传数字 @update:modelValue修改数据 -->
+    <el-select :modelValue="modelValue" @update:modelValue="emit('update:modelValue', $event)"
+     :style="{ width }">
         <!-- 封装成组件 -->
         <!-- label中的数据是展示给用户看的，value是提供给后台 -->
         <el-option v-for="channel in channelList" :key="channel.id" :label="channel.cate_name"

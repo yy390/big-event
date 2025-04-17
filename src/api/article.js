@@ -18,3 +18,7 @@ export const artDelChannelService = (id) =>
 // 文章：获取文章列表
 export const artGetListService = (params) =>
     request.get('/my/article/list', {params})
+// 文章：添加文章
+// 此处：data选哟一个form'Data格式的对象
+export const artPublishService=(data)=>
+    request.post('/my/article/add',data)
