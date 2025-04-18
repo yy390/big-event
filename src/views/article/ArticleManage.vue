@@ -64,7 +64,7 @@ const onAddArticle = () => {
 }
 // 编辑文章
 const onEditArticle = (row) => {
-    articleEditRef.value.open({ row })
+    articleEditRef.value.open( row )
     console.log(row);
 }
 // 删除文章
