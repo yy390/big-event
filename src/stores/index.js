@@ -11,3 +11,4 @@ export default pinia
 // export{useUserStore}
 // 等价于下面代码
 export * from './modules/user'
+// export * from './modules/counter'
